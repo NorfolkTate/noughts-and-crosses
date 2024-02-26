@@ -1,3 +1,4 @@
+/*general body styles*/
 body {
     background-color:rgb(251, 206, 219);
     margin: 0;
@@ -6,6 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
 }
+/*game board*/
 .board {
     text-align: center;
     background-color: rgb(253, 241, 244);
@@ -13,10 +15,11 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/*header*/
 .heading {
     display: flex;
 }
-
+/*game grid*/
 .game {
     align-self: center;
     display: grid;
@@ -27,7 +30,7 @@ body {
     height: 300px;
     margin: 0;
 }
-
+/*cell boxes*/
 .box {
     display: flex;
     align-items: center;
@@ -35,7 +38,7 @@ body {
     font-size: 24px;
     border: 3px solid #000;
 }
-
+/*reset button*/
 .reset {
     padding: 8px 16px;
     font-size: 14px;
