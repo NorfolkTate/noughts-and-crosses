@@ -1,17 +1,24 @@
 body {
-    background-color: #f4f4f4;
+    background-color:rgb(251, 206, 219);
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-
+.board {
+    text-align: center;
+    background-color: rgb(253, 241, 244);
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .heading {
     display: flex;
 }
 
 .game {
+    align-self: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
