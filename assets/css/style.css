@@ -3,6 +3,7 @@ body {
     background-color:rgb(251, 206, 219);
     margin: 0;
     display: flex;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,13 +12,19 @@ body {
 .board {
     text-align: center;
     background-color: rgb(253, 241, 244);
-    padding: 100px;
+    margin: 10px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /*header*/
 .heading {
     display: flex;
+    color: #80114e;
 }
 /*game grid*/
 .game {
@@ -36,7 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    border: 3px solid #000;
+    border: 3px solid #80114e;
 }
 /*reset button*/
 .reset {
@@ -45,6 +52,50 @@ body {
     border-radius: 4px;
 }
 
+/*media query for 320 - 410px*/
+@media screen and (min-width:320px) and (max-width: 410px) {
+  .board {
+    padding: 10px;
+    margin: 0;
+  }
+  }
 
-  
-  
+/*media query for 411 - 680px*/
+@media screen and (min-width: 411px) and (max-width: 680px) {
+
+}
+/*media query for 681 - 911px*/
+@media screen and (min-width: 681px) and (max-width: 911px) {
+ body {
+    padding: 5px;
+ }
+.board {
+    width: 60%;
+}
+.game {
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+}
+}
+/*media query for 912 - 1150px*/
+@media screen and (min-width: 912px) and (max-width: 1150px) {
+.board {
+    width: 70%;
+    height: 50%;
+}
+.game {
+    width: 600px;
+    height: 600px;
+}
+.heading {
+    font-size: 180%;
+}
+}
+/*media query for 1151 - 1629*/
+@media screen and (min-width: 1151px) and (max-width: 1629px) {
+.board {
+    width: 50%;
+    height: 50%;
+}
+}
