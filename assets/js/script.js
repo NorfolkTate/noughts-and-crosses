@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let gameBoard = ['', '', '', '', '', '', '', '', ''];
     let isGameActive = true;
     let winner = null;
+
+    const boxes = document.querySelectorAll('.box');
+    const scoreElement = document.querySelector('.score');
+    const resetButton = document.querySelector('.reset button');
 })
 
 function makeMove() {
