@@ -15,8 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-function makeMove() {
-
+function makeMove(index) {
+    if (isGameActive && gameBoard[index] === '') {
+        gameBoard[index] = currentPlayer;
+        updateBoard();
+        checkForWinner();
+    }
 }
 
 function checkWinner() {
