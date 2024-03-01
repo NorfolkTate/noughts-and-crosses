@@ -20,6 +20,9 @@ function makeMove(index) {
         gameBoard[index] = currentPlayer;
         updateBoard();
         checkForWinner();
+        if (isGameActive) {
+            switchPlayer();
+        }
     }
 }
 
