@@ -37,6 +37,15 @@ function checkWinner() {
         [0,4,8],
         [2,4,6],
     ];
+
+    for (let pattern of winPattern) {
+        let [a, b, c] = pattern;
+        if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+          winner = gameBoard[a];
+          isGameActive = false;
+          displayWinner();
+          break;
+        }
 }
 // Function to reset game
 function resetGame() {
