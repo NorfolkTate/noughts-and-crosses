@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     box.addEventListener('click', () => makeMove(index));
   });
 });
-
+// Function to make a move
 function makeMove(index) {
     if (isGameActive && gameBoard[index] === '') {
         gameBoard[index] = currentPlayer;
@@ -25,11 +25,11 @@ function makeMove(index) {
         }
     }
 }
-
+// Function to check a winner
 function checkWinner() {
 
 }
-
+// Function to reset game
 function resetGame() {
 
 }
