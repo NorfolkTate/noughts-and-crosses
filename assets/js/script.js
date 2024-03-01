@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             makeMove(index);
         });
     });
-
+    
 // Function to make a move
 function makeMove(index) {
     if (isGameActive && gameBoard[index] === '') {
@@ -62,7 +62,12 @@ function checkWinner() {
 }
 // Function to reset game
 function resetGame() {
-
+    currentPlayer = 'X';
+    gameBoard = ['', '', '', '', '', '', '', '', ''];
+    isGameActive = true;
+    winner = null;
+    updateBoard();
+    scoreElement.textContent = '';
 }
 });
 
