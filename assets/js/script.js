@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", function() {
             makeMove(index);
         });
     });
-    
+
+    // Event listener for reset button
+    resetButton.addEventListener('click', resetGame);
+
 // Function to make a move
 function makeMove(index) {
     if (isGameActive && gameBoard[index] === '') {
