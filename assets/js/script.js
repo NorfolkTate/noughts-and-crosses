@@ -105,21 +105,23 @@ function computerMove() {
     }
 }
 
+
 // Function to display the winner
-function displayWinner() {
+function displayWinner(winner) {
     const scoreElement = document.getElementById('score');
-    
+
     if (winner) {
         scoreElement.textContent = winner === 'X' ? 'You win!' : 'You lose!';
     } else {
         scoreElement.textContent = "It's a draw!";
     }
+    gameOver = true;
 }
 
 //Function to check fro a draw
 function checkDraw() {
     return gameBoard.every(cell => cell !== '');
-}
+} 
 
 
 
@@ -127,6 +129,7 @@ function checkDraw() {
 function resetGame() {
     currentPlayer = 'X';
     gameBoard = ['', '', '', '', '', '', '', '', ''];
+    isGameActive = true;
     gameOver = false;
 
     boxes.forEach(box => {
