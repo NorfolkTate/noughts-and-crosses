@@ -94,6 +94,12 @@ for (let pattern of winPattern) {
     }
 }
 
+//Function to check for a draw
+function checkDraw() {
+    return gameBoard.every(cell => cell !== '') && !checkWinner();
+} 
+
+
 
 // Function to display the winner
 function displayWinner(winner) {
@@ -107,13 +113,6 @@ function displayWinner(winner) {
 
     gameOver = true;
 }
-
-//Function to check fro a draw
-function checkDraw() {
-    return gameBoard.every(cell => cell !== '') && !checkWinner();
-} 
-
-
 
 // Function to reset game
 function resetGame() {
