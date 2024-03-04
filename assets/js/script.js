@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 let currentPlayer = 'X';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let isGameActive = true;
-let winner = null;
     
 let winPattern = [
     [0,1,2],
@@ -115,12 +114,13 @@ function displayWinner(winner) {
     } else {
         scoreElement.textContent = "It's a draw!";
     }
+
     gameOver = true;
 }
 
 //Function to check fro a draw
 function checkDraw() {
-    return gameBoard.every(cell => cell !== '');
+    return gameBoard.every(cell => cell !== '') && !checkWinner();
 } 
 
 
@@ -136,6 +136,6 @@ function resetGame() {
         box.textContent = '';
     });
 
-    scoreElement.textContent = '';
+    displayWinner(null);
 }
 });
