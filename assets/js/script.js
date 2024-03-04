@@ -33,12 +33,25 @@ resetButton.addEventListener('click', resetGame);
 function makeMove(index) {
     if (gameBoard[index] === '' && !checkWinner()) {
         gameBoard[index] = currentPlayer;
-        document.getElementsByClassName('box')[index].innerText = currentPlayer;
+    }
+
+    document.getElementsByClassName('box')[index].innerText = currentPlayer;
+
+    let winner = checkWinner();
+    if (winner) {
+        endGame(winner);
+    } else if (checkDraw()) {
+        endGame(null);
+    } else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        checkWinner();
+        if (currentPlayer === 'O' && !gameOver) {
+            computerMove();
+        }
     }
 }
-        
+
+
+  
 // Function to check a winner
   function checkWinner() {
     let winPattern = [
