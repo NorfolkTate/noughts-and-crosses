@@ -16,7 +16,7 @@ let winPattern = [
 ];
     
 const boxes = document.querySelectorAll('.box');
-const scoreElement = document.querySelector('.score');
+const scoreElement = document.getElementById('score');
 const resetButton = document.querySelector('.reset button');
     
     
@@ -24,30 +24,32 @@ const resetButton = document.querySelector('.reset button');
 boxes.forEach((box, index) => {
     box.addEventListener('click', () => makeMove(index));
 });
-    
+
 // Event listener for reset button
-resetButton.addEventListener('click', resetGame); 
+resetButton.addEventListener('click', resetGame);
         
 // updated function to make a move
-function makeMove(index) {
-    if (gameBoard[index] === '' && !checkWinner()) {
-        gameBoard[index] = currentPlayer;
-    }
 
-    document.getElementsByClassName('box')[index].innerText = currentPlayer;
+    // Function to make a move
+    function makeMove(index) {
+        if (gameBoard[index] === '' && isGameActive) {
+            gameBoard[index] = currentPlayer;
+            boxes[index].innerText = currentPlayer;
 
-    let winner = checkWinner();
-    if (winner) {
-        endGame(winner);
-    } else if (checkDraw()) {
-        endGame(null);
-    } else {
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        if (currentPlayer === 'O' && isGameActive) {
-            computerMove();
+            let winner = checkWinner();
+            if (winner) {
+                endGame(winner);
+            } else if (checkDraw()) {
+                endGame(null);
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                if (currentPlayer === 'O' && isGameActive) {
+                    setTimeout(computerMove, 500);
+                }
+            }
         }
     }
-}
+
 
 // Function for the computer to make a move
 function computerMove() {
