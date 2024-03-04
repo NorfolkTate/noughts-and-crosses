@@ -121,12 +121,9 @@ function resetGame() {
     currentPlayer = 'X';
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     isGameActive = true;
-    gameOver = false;
 
     boxes.forEach(box => {
         box.textContent = '';
     });
-
-    displayWinner(null);
 }
 });
