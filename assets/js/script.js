@@ -30,25 +30,25 @@ resetButton.addEventListener('click', resetGame);
         
 // updated function to make a move
 
-    // Function to make a move
-    function makeMove(index) {
-        if (gameBoard[index] === '' && isGameActive) {
-            gameBoard[index] = currentPlayer;
-            boxes[index].innerText = currentPlayer;
+// Function to make a move
+function makeMove(index) {
+    if (gameBoard[index] === '' && isGameActive) {
+        gameBoard[index] = currentPlayer;
+        boxes[index].innerText = currentPlayer;
 
-            let winner = checkWinner();
-            if (winner) {
-                endGame(winner);
-            } else if (checkDraw()) {
-                endGame(null);
-            } else {
-                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-                if (currentPlayer === 'O' && isGameActive) {
-                    setTimeout(computerMove, 500);
-                }
+        let winner = checkWinner();
+        if (winner) {
+            endGame(winner);
+        } else if (checkDraw()) {
+            endGame(null);
+        } else {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            if (currentPlayer === 'O' && isGameActive) {
+                setTimeout(computerMove, 500);
             }
         }
     }
+}
 
 
 // Function for the computer to make a move
@@ -58,7 +58,6 @@ function computerMove() {
             if (!cell) {
                 acc.push(index);
             }
-
             return acc;
         }, []);
 
@@ -67,7 +66,7 @@ function computerMove() {
             let computerChoice = emptyCells[randomIndex];
 
             gameBoard[computerChoice] = currentPlayer;
-            document.getElementsByClassName('box')[computerChoice].innerText = currentPlayer;
+            boxes[computerChoice].innerText = currentPlayer;
 
             let winner = checkWinner();
             if (winner) {
@@ -83,19 +82,8 @@ function computerMove() {
 
 
 // Function to check a winner
-  function checkWinner() {
-    let winPattern = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6],
-    ];
-    
-    for (let pattern of winPattern) {
+function checkWinner() {
+for (let pattern of winPattern) {
         let [a, b, c] = pattern;
         if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
             winner = gameBoard[a];
