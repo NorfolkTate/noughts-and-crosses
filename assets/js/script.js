@@ -50,8 +50,37 @@ function makeMove(index) {
     }
 }
 
+// Function for the computer to make a move
+function computerMove() {
+    if (isGameActive) {
+        let emptyCells = gameBoard.reduce((acc, cell, index) => {
+            if (!cell) {
+                acc.push(index);
+            }
 
-  
+            return acc;
+        }, []);
+
+        if (emptyCells.length > 0) {
+            let randomIndex = Math.floor(Math.random() * emptyCells.length);
+            let computerChoice = emptyCells[randomIndex];
+
+            gameBoard[computerChoice] = currentPlayer;
+            document.getElementsByClassName('box')[computerChoice].innerText = currentPlayer;
+
+            let winner = checkWinner();
+            if (winner) {
+                endGame(winner);
+            } else if (checkDraw()) {
+                endGame(null);
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            }
+        }
+    }
+}
+
+
 // Function to check a winner
   function checkWinner() {
     let winPattern = [
