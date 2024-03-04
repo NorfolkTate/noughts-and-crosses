@@ -86,12 +86,10 @@ function checkWinner() {
 for (let pattern of winPattern) {
         let [a, b, c] = pattern;
         if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
-            winner = gameBoard[a];
-            isGameActive = false;
-            displayWinner();
-            break;
+            return gameBoard[a];
         }
     }
+    return null;
 }
 
 //Function to check for a draw
@@ -100,6 +98,10 @@ function checkDraw() {
 } 
 
 //Function to end game
+function endGame(winner) {
+    isGameActive = false;
+    displayWinner(winner);
+}
 
 // Function to display the winner
 function displayWinner(winner) {
