@@ -44,7 +44,7 @@ function makeMove(index) {
         endGame(null);
     } else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        if (currentPlayer === 'O' && !gameOver) {
+        if (currentPlayer === 'O' && isGameActive) {
             computerMove();
         }
     }
