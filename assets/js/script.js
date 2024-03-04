@@ -63,6 +63,13 @@ function makeMove(index) {
     }
 }
 
+//Function to check fro a draw
+function checkDraw() {
+    return gameBoard.every(cell => cell !== '');
+}
+
+
+
 // Function to reset game
 function resetGame() {
     currentPlayer = 'X';
