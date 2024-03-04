@@ -1,34 +1,45 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Game play
-    let currentPlayer = 'X';
-    let gameBoard = ['', '', '', '', '', '', '', '', ''];
-    let isGameActive = true;
-    let winner = null;
+// Game play
+let currentPlayer = 'X';
+let gameBoard = ['', '', '', '', '', '', '', '', ''];
+let isGameActive = true;
+let winner = null;
 
-    let winPattern = [
-        [0,1,2],
-        [3,4,5],
-        [6,7,8],
-        [0,3,6],
-        [1,4,7],
-        [2,5,8],
-        [0,4,8],
-        [2,4,6],
-    ];
+let winPattern = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6],
+];
 
-    const boxes = document.querySelectorAll('.box');
-    const scoreElement = document.querySelector('.score');
-    const resetButton = document.querySelector('.reset button');
+const boxes = document.querySelectorAll('.box');
+const scoreElement = document.querySelector('.score');
+const resetButton = document.querySelector('.reset button');
 
-    // Event listeners for boxes
-    boxes.forEach((box, index) => {
-        box.addEventListener('click', () => makeMove(index));
-    });
 
-    // Event listener for reset button
-    resetButton.addEventListener('click', resetGame);
+// Event listeners for boxes
+boxes.forEach((box, index) => {
+    box.addEventListener('click', () => makeMove(index));
+});
 
-// Function to make a move
+// Event listener for reset button
+resetButton.addEventListener('click', resetGame);
+    
+
+function makeMove(index) {
+    if (gameBoard[index] === '' && !checkWinner()) {
+        gameBoard[index] = currentPlayer;
+        document.getElementsByClassName('box')[index].innerText = currentPlayer;
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        checkWinner();
+    }
+}
+
+/* Function to make a move
 function makeMove(index) {
     if (isGameActive && gameBoard[index] === '') {
       gameBoard[index] = currentPlayer;
@@ -43,7 +54,7 @@ function makeMove(index) {
         }
       }
   }
-}
+} */
 
 
 // Function to check a winner
