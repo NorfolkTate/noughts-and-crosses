@@ -99,7 +99,7 @@ function checkDraw() {
     return gameBoard.every(cell => cell !== '') && !checkWinner();
 } 
 
-
+//Function to end game
 
 // Function to display the winner
 function displayWinner(winner) {
