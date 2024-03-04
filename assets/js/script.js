@@ -105,6 +105,17 @@ function computerMove() {
     }
 }
 
+// Function to display the winner
+function displayWinner() {
+    const scoreElement = document.getElementById('score');
+    
+    if (winner) {
+        scoreElement.textContent = winner === 'X' ? 'You win!' : 'You lose!';
+    } else {
+        scoreElement.textContent = "It's a draw!";
+    }
+}
+
 //Function to check fro a draw
 function checkDraw() {
     return gameBoard.every(cell => cell !== '');
