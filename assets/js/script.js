@@ -125,5 +125,6 @@ function resetGame() {
     boxes.forEach(box => {
         box.textContent = '';
     });
+    scoreElement.textContent = '';
 }
 });
