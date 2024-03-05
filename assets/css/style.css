@@ -90,12 +90,15 @@ body {
 /*media query for 912 - 1150px*/
 @media screen and (min-width: 912px) and (max-width: 1150px) {
 .board {
-    width: 70%;
-    height: 50%;
+    width: 60%;
+    height: 70%;
 }
 .game {
-    width: 600px;
-    height: 600px;
+
+}
+.box {
+    width: 120px;
+    height: 120px;
 }
 .heading {
     font-size: 180%;
