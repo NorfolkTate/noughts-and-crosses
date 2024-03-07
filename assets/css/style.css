@@ -29,19 +29,22 @@ body {
     align-items: center;
     justify-content: center;
 }
-/*logo*/
-#logo {
-    height: 60px;
-    width: 60px;
-    margin-right: 10px;
-}
 
 /*header*/
 .heading {
     display: flex;
     color: #80114e;
     flex-direction: row;
-    align-items: baseline;
+    padding-bottom: 30px;
+    padding-left: 0;
+    align-items: center;
+}
+
+/*logo*/
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px; /* Adjust the margin as needed */
 }
 
 /*game grid*/
