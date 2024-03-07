@@ -28,11 +28,21 @@ body {
     align-items: center;
     justify-content: center;
 }
+/*logo*/
+#logo {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+
 /*header*/
 .heading {
     display: flex;
     color: #80114e;
+    flex-direction: row;
+    align-items: baseline;
 }
+
 /*game grid*/
 .game {
     align-self: center;

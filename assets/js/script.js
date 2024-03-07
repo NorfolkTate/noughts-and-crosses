@@ -18,7 +18,8 @@ let winPattern = [
 const boxes = document.querySelectorAll('.box');
 const scoreElement = document.getElementById('score');
 const resetButton = document.querySelector('.reset button');
-    
+
+  
     
 // Event listeners for boxes
 boxes.forEach((box, index) => {
