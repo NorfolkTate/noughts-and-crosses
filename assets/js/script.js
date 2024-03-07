@@ -18,9 +18,7 @@ let winPattern = [
 const boxes = document.querySelectorAll('.box');
 const scoreElement = document.getElementById('score');
 const resetButton = document.querySelector('.reset button');
-
-  
-    
+   
 // Event listeners for boxes
 boxes.forEach((box, index) => {
     box.addEventListener('click', () => makeMove(index));
@@ -28,8 +26,6 @@ boxes.forEach((box, index) => {
 
 // Event listener for reset button
 resetButton.addEventListener('click', resetGame);
-        
-// updated function to make a move
 
 // Function to make a move
 function makeMove(index) {
@@ -50,7 +46,6 @@ function makeMove(index) {
         }
     }
 }
-
 
 // Function for the computer to make a move
 function computerMove() {
@@ -80,7 +75,6 @@ function computerMove() {
         }
     }
 }
-
 
 // Function to check a winner
 function checkWinner() {

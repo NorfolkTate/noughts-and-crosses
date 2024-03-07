@@ -67,11 +67,6 @@ The user can then reset the game and start again to obtain a better score, thus 
 
 ![Reset Button](/assets/images/noughts-and-crosses-reset.png)
 
-* Footer
-    * Information to show the name of the developer
-
-![Footer]()
-
 ## Features Left to Implement
 
 * Additional levels which are progressively harder

@@ -44,7 +44,7 @@ body {
 .logo img {
     height: 50px;
     width: 50px;
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
 }
 
 /*game grid*/
@@ -58,6 +58,7 @@ body {
     height: 300px;
     margin: 0;
 }
+
 /*cell boxes*/
 .box {
     display: flex;
