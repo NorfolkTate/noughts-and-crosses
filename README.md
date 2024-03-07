@@ -1,39 +1,73 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Noughts and Crosses
 
-Welcome,
+Noughts and crosses is a tic-tac-toe style game that allows a user to play against the computer to try and score three counters in a row. The user plays as an X and the compuer plays as an O. Once the game end, the score card displays if the user wins, loses, or if the game ends in a draw. 
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The user can then reset the game and start again to obtain a better score, thus keeping them engaged.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![Am I responsive](/assets/images/noughts-and-crosses-responsive.png)
 
-## Codeanywhere Reminders
+[View the live Noughts and Crosses game](https://norfolktate.github.io/noughts-and-crosses/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Contents
 
-`python3 -m http.server`
+### [Features](#features)
+* [Existing Features](#existing-features)
+* [Features Left to Implement](#features-left-to-implement)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* Main objective is to provide an engaging and interactive platform for users to test their strategic game play
+* Responsive design that is optimized for multiple devices
+* A score card to display the outcome of the game
 
-`http_server`
+### Existing Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Logo and Heading
+    * It is prominently displayed at the top of the page, ensuring that users can easily locate and identify the game.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Logo and Heading](/assets/images/noughts-and-crosses-heading.png)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Game Board
+    * A seperate board for defining the game 
+    * Contains the grid and boxes for making a move
 
-To log into the Heroku toolbelt CLI:
+![Game Board](/assets/images/noughts-and-crosses-game-board.png) 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Grid
+    * Individual boxes for making a move
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Grid](/assets/images/noughts-and-crosses-grid.png)
 
----
+* Score Card
+    * Displays the end result once the game finishes
+    * Displays a win, lose, or draw result
+    * Resets when the game is reset
 
-Happy coding!
+![Score Card](/assets/images/noughts-and-crosses-win.png)
+
+![Score Card](/assets/images/noughts-and-crosses-draw.png)
+
+![score Card](/assets/images/noughts-and-crosses-lose.png)
+
+* Reset Button 
+    * Button to reset the game and start again
+    * Clears the grid and the score card to start again
+
+![Reset Button](/assets/images/noughts-and-crosses-reset.png)
+
+* Footer
+    * Information to show the name of the developer
+
+![Footer]()
+
+## Features Left to Implement
+
+* Additional levels which are progressively harder
+* A score card that keeps score and automatically resets the game, whilst keeping a running score
+* A timer to put pressure on the user to take their go in a limited time
+* Additional themes to choose from
+
+
+
+
+
