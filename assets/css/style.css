@@ -8,13 +8,14 @@ h1 {
 /*general body styles*/
 body {
     background-color:rgb(251, 206, 219);
-    margin: 0;
+    margin: 10px;
     display: flex;
     overflow: hidden;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
+
 /*game board*/
 .board {
     text-align: center;
