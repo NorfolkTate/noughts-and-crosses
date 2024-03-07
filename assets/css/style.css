@@ -111,7 +111,7 @@ body {
 /*media query for 912 - 1150px*/
 @media screen and (min-width: 912px) and (max-width: 1150px) {
 .board {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     width: 60%;
     height: 70%;
