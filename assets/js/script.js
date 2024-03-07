@@ -113,8 +113,6 @@ function displayWinner(winner) {
     } else {
         scoreElement.textContent = "It's a draw!";
     }
-
-    gameOver = true;
 }
 
 // Function to reset game
