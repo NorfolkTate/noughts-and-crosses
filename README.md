@@ -13,6 +13,7 @@ The user can then reset the game and start again to obtain a better score, thus 
 ### [Features](#features)
 * [Existing Features](#existing-features)
 * [Features Left to Implement](#features-left-to-implement)
+### [Design](#design)
 
 ## Features
 
@@ -67,7 +68,23 @@ The user can then reset the game and start again to obtain a better score, thus 
 * A timer to put pressure on the user to take their go in a limited time
 * Additional themes to choose from
 
+## Design
 
+ * Colour Scheme
+    * Primary colors used on the website:
+        * rgb(251, 206, 219);
+        * rgb(253, 241, 244);
+        * #80114e;
+    
+     ![Color Scheme]()
+
+ * Typography
+    * Madimi was the main font used with sans-serif as the back up
+
+ * Wireframes
+    * Figma was used for creating a basic layout and colour scheme 
+
+    ![Wire Frame](/assets/images/noughts-and-crosses-wire-frame.png)
 
 
 
