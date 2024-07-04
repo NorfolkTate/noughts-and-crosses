@@ -141,16 +141,29 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate to 
 
 ## Deployment
 
-The site was deployed to GitHub pages. The steps to deploy are as follows: 
+### GitHub Pages
+Deploying the Website Using GitHub Pages
+* Log in to GitHub and navigate to the GitHub repository [Noughts and Crosses](https://github.com/NorfolkTate/noughts-and-crosses)
+* In the repository menu (not the main navigation), find and click on the "Settings" button.
+* Scroll down the Settings page until you see the "GitHub Pages" section.
+* Under "Source," open the dropdown menu that says "None," select "Main," and click "Save."
+* The page will refresh automatically.
+* Scroll down to the "GitHub Pages" section to find the link to the now-published site [here](https://github.com/NorfolkTate/noughts-and-crosses)
 
-* In the GitHub repository, navigate to the Settings tab
-* Select pages from the side bar on the left
-* Ensure source is set to 'deplot from branch'
-* Select main branch and ensure folder is set to / (root).
-* Click save
-* Wait a moment and refresh
+### Forking the GitHub Repository
+Forking the repository allows you to create a copy of the original repository in your GitHub account, enabling you to view and modify it without altering the original. Follow these steps:
+* Log in to GitHub and go to the GitHub repository [Noughts and Crosses](https://github.com/NorfolkTate/noughts-and-crosses)
+* In the repository menu (below the main navigation), click on the "Fork" button.
+* You will now have a copy of the original repository in your GitHub account.
 
-[The live link can be found here](https://norfolktate.github.io/noughts-and-crosses/)
+### Cloning the Repository Locally
+* Log in to GitHub and visit the GitHub repository [Noughts and Crosses](https://github.com/NorfolkTate/noughts-and-crosses)
+* Under the repository name, click the "Clone or download" button.
+* Click the "Code" button, select your preferred method (HTTPS, SSH, or GitHub CLI), and copy the link provided.
+* Open Git Bash.
+* Navigate to the directory where you want to create the cloned repository.
+* Type git clone, paste the URL copied earlier, and press Enter.
+* Your local clone of the repository will be created.
 
 ## Credits 
 
