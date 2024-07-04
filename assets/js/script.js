@@ -19,9 +19,9 @@ const boxes = document.querySelectorAll('.box');
 const scoreElement = document.getElementById('score');
 const resetButton = document.querySelector('.reset button');
 
-// Function to disable bord until next move
+// Function to disable board until next move
 function disableBoard() {
-
+    boxes.forEach(pointerEvents);
 }
 
    
