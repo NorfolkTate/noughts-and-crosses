@@ -18,6 +18,12 @@ let winPattern = [
 const boxes = document.querySelectorAll('.box');
 const scoreElement = document.getElementById('score');
 const resetButton = document.querySelector('.reset button');
+
+// Function to disable bord until next move
+function disableBoard() {
+
+}
+
    
 // Event listeners for boxes
 boxes.forEach((box, index) => {
