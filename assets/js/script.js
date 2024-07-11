@@ -92,7 +92,13 @@ function computerMove() {
 
 // Function to make the best strategic move for computer
 function getBestMove() {
-
+    //check for a winning move
+    for (let pattern of winPattern) {
+        let [a, b, c] = pattern;
+        if (gameBoard[a] === 'O' && gameBoard[b] === 'O' && gameBoard[c] === '') return c;
+        if (gameBoard[a] === 'O' && gameBoard[b] === '' && gameBoard[c] === 'O') return b;
+        if (gameBoard[a] === '' && gameBoard[b] === 'O' && gameBoard[c] === 'O') return a;
+    }
 }
 
 // Function to check a winner
