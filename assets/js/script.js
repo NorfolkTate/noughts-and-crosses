@@ -131,7 +131,9 @@ function resetGame() {
 
     boxes.forEach(box => {
         box.textContent = '';
+        box.style.pointerEvents = 'auto';
     });
     scoreElement.textContent = '';
+    enableBoard();
 }
 });
