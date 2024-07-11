@@ -40,7 +40,7 @@ resetButton.addEventListener('click', resetGame);
 
 // Function to make a move
 function makeMove(index) {
-    if (gameBoard[index] === '' && isGameActive) {
+    if (gameBoard[index] === '' && isGameActive && currentPlayer === 'X') {
         disableBoard();
 
         gameBoard[index] = currentPlayer;
