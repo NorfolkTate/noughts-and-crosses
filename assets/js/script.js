@@ -99,6 +99,15 @@ function getBestMove() {
         if (gameBoard[a] === 'O' && gameBoard[b] === '' && gameBoard[c] === 'O') return b;
         if (gameBoard[a] === '' && gameBoard[b] === 'O' && gameBoard[c] === 'O') return a;
     }
+
+        // Check and choose centre square if availalbe 
+        if (gameBoard[4] === '') return 4;
+
+        // Check and choose a corner if available
+        const corners = [0, 2, 6, 8];
+        for (let corner of corners) {
+            if (gameBoard[corner] === '') return corner;
+        }
 }
 
 // Function to check a winner
