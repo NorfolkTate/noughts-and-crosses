@@ -84,7 +84,7 @@ function computerMove() {
             } else if (checkDraw()) {
                 endGame(null);
             } else {
-                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                currentPlayer = 'X'
             }
         }
     }
