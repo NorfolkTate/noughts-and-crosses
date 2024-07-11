@@ -63,7 +63,10 @@ function makeMove(index) {
 
 // Function for the computer to make a move
 function computerMove() {
-    if (isGameActive) 
+    if (isGameActive) {
+        let bestMove = getBestMove();
+        if (bestMove !== -1) {
+            gameBoard[bestMove] = currentPlayer;
 
             let winner = checkWinner();
             if (winner) {
@@ -73,7 +76,7 @@ function computerMove() {
             } else {
                 currentPlayer = 'X'
             }
-        }
+        } 
     }
 }
 
