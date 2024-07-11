@@ -21,12 +21,12 @@ const resetButton = document.querySelector('.reset button');
 
 // Function to disable board until next move
 function disableBoard() {
-    boxes.forEach(pointerEvents);
+    boxes.forEach(box => box.style.pointerEvents = 'none');
 }
 
 // Function to reenable board after computer move
 function enableBoard() {
-    boxes.forEach(pointerEvents);
+    boxes.forEach(box => box.style.pointerEvents = 'auto');
 }
 
    
