@@ -52,7 +52,7 @@ function makeMove(index) {
         } else if (checkDraw()) {
             endGame(null);
         } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            currentPlayer = 'O';
             if (currentPlayer === 'O' && isGameActive) {
                 setTimeout(computerMove, 500);
                 enableBoard();
