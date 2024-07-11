@@ -90,6 +90,11 @@ function computerMove() {
     }
 }
 
+// Function to make the best strategic move for computer
+function getBestMove() {
+
+}
+
 // Function to check a winner
 function checkWinner() {
 for (let pattern of winPattern) {
