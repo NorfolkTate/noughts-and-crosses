@@ -24,6 +24,11 @@ function disableBoard() {
     boxes.forEach(pointerEvents);
 }
 
+// Function to reenable board after computer move
+function enableBoard() {
+    
+}
+
    
 // Event listeners for boxes
 boxes.forEach((box, index) => {
