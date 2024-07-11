@@ -26,7 +26,7 @@ function disableBoard() {
 
 // Function to reenable board after computer move
 function enableBoard() {
-    
+
 }
 
    
@@ -55,6 +55,7 @@ function makeMove(index) {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             if (currentPlayer === 'O' && isGameActive) {
                 setTimeout(computerMove, 500);
+                enableBoard();
             }
         }
     }
