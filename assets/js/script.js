@@ -53,10 +53,10 @@ function makeMove(index) {
             endGame(null);
         } else {
             currentPlayer = 'O';
-            if (currentPlayer === 'O' && isGameActive) {
-                setTimeout(computerMove, 500);
+            setTimeout(() => {
+                computerMove();
                 enableBoard();
-            }
+            }, 500);
         }
     }
 }
