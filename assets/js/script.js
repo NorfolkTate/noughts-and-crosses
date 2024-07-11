@@ -90,6 +90,14 @@ function getBestMove() {
         if (gameBoard[a] === '' && gameBoard[b] === 'O' && gameBoard[c] === 'O') return a;
     }
 
+        // block player's winning move
+        for (let pattern of winPattern) {
+            let [a, b, c] = pattern;
+            if (gameBoard[a] === 'X' && gameBoard[b] === 'X' && gameBoard[c] === '') return c;
+            if (gameBoard[a] === 'X' && gameBoard[b] === '' && gameBoard[c] === 'X') return b;
+            if (gameBoard[a] === '' && gameBoard[b] === 'X' && gameBoard[c] === 'X') return a;
+    }
+
         // Check and choose centre square if availalbe 
         if (gameBoard[4] === '') return 4;
 
