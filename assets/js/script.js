@@ -63,20 +63,7 @@ function makeMove(index) {
 
 // Function for the computer to make a move
 function computerMove() {
-    if (isGameActive) {
-        let emptyCells = gameBoard.reduce((acc, cell, index) => {
-            if (!cell) {
-                acc.push(index);
-            }
-            return acc;
-        }, []);
-
-        if (emptyCells.length > 0) {
-            let randomIndex = Math.floor(Math.random() * emptyCells.length);
-            let computerChoice = emptyCells[randomIndex];
-
-            gameBoard[computerChoice] = currentPlayer;
-            boxes[computerChoice].innerText = currentPlayer;
+    if (isGameActive) 
 
             let winner = checkWinner();
             if (winner) {
