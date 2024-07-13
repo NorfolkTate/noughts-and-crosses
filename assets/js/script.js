@@ -106,6 +106,13 @@ function getBestMove() {
         for (let corner of corners) {
             if (gameBoard[corner] === '') return corner;
         }
+
+        let emptyCells = gameBoard.reduce((acc, cell, index) => {
+            if (!cell) {
+                acc.push(index);
+            }
+            return acc;
+        }, []);
 }
 
 // Function to check a winner
