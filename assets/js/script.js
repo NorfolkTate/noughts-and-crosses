@@ -113,6 +113,8 @@ function getBestMove() {
             }
             return acc;
         }, []);
+
+        return emptyCells.length > 0 ? emptyCells[Math.floor(Math.random() * emptyCells.length)] : -1;
 }
 
 // Function to check a winner
