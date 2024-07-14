@@ -41,8 +41,6 @@ resetButton.addEventListener('click', resetGame);
 // Function to make a move
 function makeMove(index) {
     if (gameBoard[index] === '' && isGameActive && currentPlayer === 'X') {
-        disableBoard();
-
         gameBoard[index] = currentPlayer;
         boxes[index].innerText = currentPlayer;
 
@@ -53,9 +51,9 @@ function makeMove(index) {
             endGame(null);
         } else {
             currentPlayer = 'O';
+            disableBoard();
             setTimeout(() => {
                 computerMove();
-                enableBoard();
             }, 500);
         }
     }
@@ -67,6 +65,7 @@ function computerMove() {
         let bestMove = getBestMove();
         if (bestMove !== -1) {
             gameBoard[bestMove] = currentPlayer;
+            boxes[bestMove].innerText = currentPlayer;
 
             let winner = checkWinner();
             if (winner) {
@@ -74,7 +73,8 @@ function computerMove() {
             } else if (checkDraw()) {
                 endGame(null);
             } else {
-                currentPlayer = 'X'
+                currentPlayer = 'X';
+                enableBoard();
             }
         } 
     }
@@ -136,6 +136,7 @@ function checkDraw() {
 //Function to end game
 function endGame(winner) {
     isGameActive = false;
+    disableBoard();
     displayWinner(winner);
 }
 
