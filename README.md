@@ -18,6 +18,7 @@ The user can then reset the game and start again to obtain a better score, thus 
 * [Validation](#validation)
 * [Manual Testing](#manual-testing)
 * [Fixed Bugs](#fixed-bugs)
+* [Errors found in testing](#errors-found-in-testing)
 * [Unfixed Bugs](#unfixed-bugs)
 * [Lighthouse Report](#lighthouse-report)
 ### [Deployment](#deployment-1)
@@ -122,18 +123,44 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate to 
 
 ### Fixed Bugs
 
-* The score card would always respons with a draw
-* Pressing the reset button would trigger the message "It's a draw"
-* The computer wouldn't take a turn
-* Couldn't make a move
-* Reset button wouldn't clear previous score card message
-* computer couldn't make a move after pressing the reset button
+* Fix computer turn not displaying
+    * To fix this, I added an inner text update and esured that it was reflecting the current player - in this case the computer
+* Fix issue of game not reseting
+    * The game would not reset after the first try, I had not updated it to reflect all the new variables of the game I had added in. I ensured all the enable and disable boards were correct and that the gane was enabled after a reset 
+* Fix issue of pointer events not being defined
+    * I had incorrect syntax and the pointer event was not defined as none. By setting the boxes to not react to a pointer event the player can now no longer take a turn that's not their own
+* Fix logo styling
+    * A lot of trial and error on what should have been quite simple. It was fixed in the end with help by adjusting the margin and aligning the image on the baseline. I had help from stack overflow, slack community and team treehouse for this (see credits)
+* Fix favicon bug and add in image
+    * Classic turn it off and on again, just reimported the file
+* Fix bugs with favicons and fix make move bug
+    * I mistakenly believed that you needed an event listener is the JavaScript code and also the HTML it related to. I removed the event listeners from the HTML. This solution came from Code Institute tutor support
+* Fix bug for reset button position
+    * Added css styling 
+* Add css styling to fix box size on ipad screen
+    * The game board grid was distorting on certain screens, added css styling to media query to fix this issue
+* Fix reset button bug by adding in an empty string to clear text content
+    * Mostly explained during the commit message, I used text Content fix this with help from java t point (see credits)
+* Fix make move bug by moving winner variable and else if statement into make move function
+    * I had planned the check winner variable in the display winner function. It made more sense to put it into the make move function as that handles all the game logic and the display winner only handles the display logic
+* Fix bug in reset button 
+* Fix make move bug so computer takes a turn
+* Fix computer move function
+* Fix make move bug
+* Fix spelling error in make move function
+* Fix error by defining win pattern
+
+### Errors found in testing
+
+* Game is very easy and had no defensive design 
+* User can click multiple boxes before the computer takes a turn
+* Unexpected feedback when user plays quickly
+* Users can also take turns for the computer / press the boxes when it is the computer's turn and affect the placement of the next move.
 
 ### Unfixed Bugs
 
-* The game is very easy 
 * Header distorts on a browser that isn't full size
-* Colours were off on one Samsung Galaxy S7 (haven't been able to replicate this)
+
 
 ### Lighthouse Report
 
