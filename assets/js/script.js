@@ -21,15 +21,14 @@ const resetButton = document.querySelector('.reset button');
 
 // Function to disable board until next move
 function disableBoard() {
-    boxes.forEach(box => box.style.pointerEvents = 'none');
+    boxes.forEach(box => box.style.pointerEvents = 'none'); // code helpfully explained by mdn web docs (linked in Readme)
 }
 
 // Function to reenable board after computer move
 function enableBoard() {
-    boxes.forEach(box => box.style.pointerEvents = 'auto');
+    boxes.forEach(box => box.style.pointerEvents = 'auto'); // code helpfully explained by mdn web docs (linked in Readme)
 }
 
-   
 // Event listeners for boxes
 boxes.forEach((box, index) => {
     box.addEventListener('click', () => makeMove(index));
@@ -42,7 +41,7 @@ resetButton.addEventListener('click', resetGame);
 function makeMove(index) {
     if (gameBoard[index] === '' && isGameActive && currentPlayer === 'X') {
         gameBoard[index] = currentPlayer;
-        boxes[index].innerText = currentPlayer;
+        boxes[index].innerText = currentPlayer; // code helpfully inspired by study group (linked in Readme)
 
         let winner = checkWinner();
         if (winner) {
@@ -54,7 +53,7 @@ function makeMove(index) {
             disableBoard();
             setTimeout(() => {
                 computerMove();
-            }, 500);
+            }, 500); // code helpfully provided by stack overflow (linked in Readme)
         }
     }
 }
@@ -63,7 +62,7 @@ function makeMove(index) {
 function computerMove() {
     if (isGameActive) {
         let bestMove = getBestMove();
-        if (bestMove !== -1) {
+        if (bestMove !== -1) { // code helpfully inspired by study group (linked in Readme)
             gameBoard[bestMove] = currentPlayer;
             boxes[bestMove].innerText = currentPlayer;
 
@@ -85,7 +84,7 @@ function getBestMove() {
     //check for a winning move
     for (let pattern of winPattern) {
         let [a, b, c] = pattern;
-        if (gameBoard[a] === 'O' && gameBoard[b] === 'O' && gameBoard[c] === '') return c;
+        if (gameBoard[a] === 'O' && gameBoard[b] === 'O' && gameBoard[c] === '') return c; // code helpfully inspired by stack overflow (linked in Readme)
         if (gameBoard[a] === 'O' && gameBoard[b] === '' && gameBoard[c] === 'O') return b;
         if (gameBoard[a] === '' && gameBoard[b] === 'O' && gameBoard[c] === 'O') return a;
     }
@@ -109,19 +108,19 @@ function getBestMove() {
 
         let emptyCells = gameBoard.reduce((acc, cell, index) => {
             if (!cell) {
-                acc.push(index);
+                acc.push(index); // code helpfully explained by progress telerik (linked in Readme)
             }
             return acc;
         }, []);
 
-        return emptyCells.length > 0 ? emptyCells[Math.floor(Math.random() * emptyCells.length)] : -1;
+        return emptyCells.length > 0 ? emptyCells[Math.floor(Math.random() * emptyCells.length)] : -1; // code helpfully explained by w3 schools (linked in Readme)
 }
 
 // Function to check a winner
 function checkWinner() {
 for (let pattern of winPattern) {
         let [a, b, c] = pattern;
-        if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+        if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) { // code helpfully inspired by thought co (linked in Readme)
             return gameBoard[a];
         }
     }
@@ -130,7 +129,7 @@ for (let pattern of winPattern) {
 
 //Function to check for a draw
 function checkDraw() {
-    return gameBoard.every(cell => cell !== '') && !checkWinner();
+    return gameBoard.every(cell => cell !== '') && !checkWinner(); // code helpfully inspired by thought co (linked in Readme)
 } 
 
 //Function to end game
@@ -145,9 +144,9 @@ function displayWinner(winner) {
     const scoreElement = document.getElementById('score');
 
     if (winner) {
-        scoreElement.textContent = winner === 'X' ? 'You win!' : 'You lose!';
+        scoreElement.textContent = winner === 'X' ? 'You win!' : 'You lose!'; //code helpfully explained by java t point (linked in Readme)
     } else {
-        scoreElement.textContent = "It's a draw!";
+        scoreElement.textContent = "It's a draw!"; //code helpfully explained by java t point (linked in Readme)
     }
 }
 
@@ -159,7 +158,7 @@ function resetGame() {
 
     boxes.forEach(box => {
         box.textContent = '';
-        box.style.pointerEvents = 'auto';
+        box.style.pointerEvents = 'auto'; // code helpfully explained by mdn web docs (linked in Readme)
     });
     scoreElement.textContent = '';
     enableBoard();
