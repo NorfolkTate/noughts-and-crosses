@@ -4,7 +4,7 @@ let currentPlayer = 'X';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let isGameActive = true;
     
-let winPattern = [
+let winPattern = [ // code helpfully provided by stack overflow (linked in Readme)
     [0,1,2],
     [3,4,5],
     [6,7,8],

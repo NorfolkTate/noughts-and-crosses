@@ -41,8 +41,8 @@ body {
 }
 
 /*logo*/
-.logo img {
-    height: 50px;
+.logo img { /*Code helpfully inspired by treehouse (linked in Readme)*/
+    height: 50px; 
     width: 50px;
     margin-right: 10px;
 }
